@@ -90,9 +90,19 @@ async def help_menu(client, cq: CallbackQuery):
         "**USAGE:**\n"
         "Just send the link of the video or the song name, bot will automatically download it.\n"
         "Supported Platforms:\n"
-        "➢ YouTube, TikTok, Instagram, Facebook, Pinterest, Spotify, VK, Likee\n"
-        "**VIDEO QUALITY:**\n"
-        "You can select quality from Low → 4K if available.\n"
+        "➢ 🎥 Social Media and Music Downloader
+━━━━━━━━━━━━━━━━━━━━━━
+USAGE:
+Download videos and tracks from popular platforms using these commands:
+➢ /fb [Video URL] - Download a Facebook video.
+➢ /pin [Video URL] - Download a Pinterest video.
+➢ /tt [Video URL] - Download a TikTok video.
+➢ /in [Video URL] - Download Instagram Reels.
+➢ /sp [Track URL] - Download a Spotify track.
+➢ /yt [Video URL] - Download a YouTube video.
+➢ /song [Video URL] - Download as MP3
+━━━━━━━━━━━━━━━━━━━━━━
+🔔 For Bot Updates: Join Now.\n"
         "━━━━━━━━━━━━━━━━━━━━━━\n"
         "🔔 For Updates: [Join Now](https://t.me/log_channel_a)"
     )
