@@ -66,9 +66,9 @@ async def send_start_message(client, message):
     start_message = (
         f"<b>Hi {full_name}! Welcome To This Bot...</b>\n"
         "<b>━━━━━━━━━━━━━━━━━━━━━━━━━━</b>\n"
-        "<b><a href='tg://user?id=7303810912'>Smart Tool ⚙️</a></b>: The ultimate toolkit on Telegram, offering Facebook,YouTube,Pinterest,Spotify Downloader. Simplify your tasks with ease!\n"
+        "<b><a href='tg://user?id=7892805795'>Anuj Kumar ⚙️</a></b>: The ultimate toolkit on Telegram, offering Facebook,YouTube,Pinterest,Spotify Downloader. Simplify your tasks with ease!\n"
         "<b>━━━━━━━━━━━━━━━━━━━━━━━━━━</b>\n"
-        "<b>Don't Forget To <a href='https://t.me/ModVipRM'>Join Here</a> For Updates!</b>"
+        "<b>Don't Forget To <a href='https://t.me/log_channel_a'>Join Here</a> For Updates!</b>"
     )
 
     await message.reply_text(
@@ -76,8 +76,8 @@ async def send_start_message(client, message):
         parse_mode=ParseMode.HTML,
         reply_markup=InlineKeyboardMarkup([
             [InlineKeyboardButton("⚙️ Help", callback_data="help_menu"),
-             InlineKeyboardButton("➕ Add Me", url="https://t.me/ItsSmartToolBot?startgroup=new&admin=post_messages+delete_messages+edit_messages+pin_messages+change_info+invite_users+promote_members")],
-            [InlineKeyboardButton("🔄 Updates", url="https://t.me/ModVipRM"),
+             InlineKeyboardButton("➕ Add Me", url="https://t.me/Media_downloader_ak_bot?startgroup=new&admin=post_messages+delete_messages+edit_messages+pin_messages+change_info+invite_users+promote_members")],
+            [InlineKeyboardButton("🔄 Updates", url="https://t.me/log_channel_a"),
              InlineKeyboardButton("ℹ️ About Me", callback_data="about_me")]
         ]),
         disable_web_page_preview=True,
@@ -98,7 +98,7 @@ async def help_menu_callback(client: Client, callback_query: CallbackQuery):
         "➢ <b>/yt [Video URL]</b> - Download a YouTube video.\n"
         "➢ <b>/song [Video URL]</b> - Download as MP3\n"
         "━━━━━━━━━━━━━━━━━━━━━━\n"
-        "🔔 For Bot Updates: <a href='https://t.me/ModVip_rm'>Join Now</a>"
+        "🔔 For Bot Updates: <a href='https://t.me/log_channel_a'>Join Now</a>"
     )
 
     await callback_query.message.edit_text(
@@ -115,11 +115,11 @@ async def about_me_callback(client: Client, callback_query: CallbackQuery):
     about_message = (
         "<b>Name:</b> Smart Tool ⚙️\n"
         "<b>Version:</b> 3.0 (Beta Testing)\n\n"
-        "<b>Creator:</b> <a href='https://t.me/abirxdhackz'>⏤͟͞〲ᗩᗷiᖇ 𓊈乂ᗪ𓊉 👨‍💻</a>\n"
+        "<b>Creator:</b> <a href='https://t.me/anujedits76'>Anuj Kumar👨‍💻</a>\n"
         "<b>Tech:</b> Python · Pyrogram · Telethon · MongoDB\n"
         "<b>About:</b> Download from YouTube, Instagram, Facebook, Pinterest, TikTok, Spotify.\n"
         "━━━━━━━━━━━━━━━━━━━━━━━━━━\n"
-        "🔔 Updates: <a href='https://t.me/ModVipRM'>Join Here</a>"
+        "🔔 Updates: <a href='https://t.me/log_channel_a'>Join Here</a>"
     )
 
     await callback_query.message.edit_text(
@@ -138,9 +138,9 @@ async def start_menu_callback(client: Client, callback_query: CallbackQuery):
     start_message = (
         f"<b>Hi {full_name}! Welcome To This Bot...</b>\n"
         "<b>━━━━━━━━━━━━━━━━━━━━━━━━━━</b>\n"
-        "<b><a href='tg://user?id=7303810912'>Smart Tool ⚙️</a></b>: The ultimate toolkit on Telegram, offering Facebook,YouTube,Pinterest,Spotify Downloader. Simplify your tasks with ease!\n"
+        "<b><a href='tg://user?id=7892805795'>Anuj Kumar ⚙️</a></b>: The ultimate toolkit on Telegram, offering Facebook,YouTube,Pinterest,Spotify Downloader. Simplify your tasks with ease!\n"
         "<b>━━━━━━━━━━━━━━━━━━━━━━━━━━</b>\n"
-        "<b>Don't Forget To <a href='https://t.me/ModVipRM'>Join Here</a> For Updates!</b>"
+        "<b>Don't Forget To <a href='https://t.me/log_channel_a'>Join Here</a> For Updates!</b>"
     )
 
     await callback_query.message.edit_text(
@@ -148,8 +148,8 @@ async def start_menu_callback(client: Client, callback_query: CallbackQuery):
         parse_mode=ParseMode.HTML,
         reply_markup=InlineKeyboardMarkup([
             [InlineKeyboardButton("⚙️ Help", callback_data="help_menu"),
-             InlineKeyboardButton("➕ Add Me", url="https://t.me/ItsSmartToolBot?startgroup=new&admin=post_messages+delete_messages+edit_messages+pin_messages+change_info+invite_users+promote_members")],
-            [InlineKeyboardButton("🔄 Updates", url="https://t.me/ModVipRM"),
+             InlineKeyboardButton("➕ Add Me", url="https://t.me/Media_downloader_ak_bot?startgroup=new&admin=post_messages+delete_messages+edit_messages+pin_messages+change_info+invite_users+promote_members")],
+            [InlineKeyboardButton("🔄 Updates", url="https://t.me/log_channel_a"),
              InlineKeyboardButton("ℹ️ About Me", callback_data="about_me")]
         ]),
         disable_web_page_preview=True,
