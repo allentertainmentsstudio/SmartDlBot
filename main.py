@@ -20,7 +20,7 @@ from adminpanel.restart.restart import setup_restart_handler
 from adminpanel.admin.admin import setup_admin_handler
 from adminpanel.logs.logs import setup_logs_handler
 
-# ---------------- Flask Server ----------------
+# ---------------- Flask Server for Replit 24/7 ----------------
 flask_app = Flask(__name__)
 
 @flask_app.route('/')
@@ -69,7 +69,7 @@ async def start_command(client, message):
     start_caption = (
         f"<b>Hi {full_name}! Welcome To This Bot...</b>\n"
         "<b>━━━━━━━━━━━━━━━━━━━━━━━━━━</b>\n"
-        "<b><a href='tg://user?id=7892805795'>Anuj Kumar ⚙️</a></b>: The ultimate toolkit on Telegram, offering Facebook, YouTube, Pinterest, Spotify Downloader.\n"
+        "<b><a href='tg://user?id=7892805795'>Anuj Kumar ⚙️</a></b>: Ultimate toolkit on Telegram for downloading Facebook, YouTube, Pinterest, Spotify.\n"
         "<b>━━━━━━━━━━━━━━━━━━━━━━━━━━</b>\n"
         "<b>Don't Forget To <a href='https://t.me/log_channel_a'>Join Here</a> For Updates!</b>"
     )
@@ -140,7 +140,7 @@ async def start_menu_callback(client: Client, query: CallbackQuery):
     await query.message.edit_text(
         f"<b>Hi {full_name}! Welcome To This Bot...</b>\n"
         "<b>━━━━━━━━━━━━━━━━━━━━━━━━━━</b>\n"
-        "<b><a href='tg://user?id=7892805795'>Anuj Kumar ⚙️</a></b>: The ultimate toolkit on Telegram.\n"
+        "<b><a href='tg://user?id=7892805795'>Anuj Kumar ⚙️</a></b>: Ultimate toolkit on Telegram.\n"
         "<b>━━━━━━━━━━━━━━━━━━━━━━━━━━</b>\n"
         "<b>Don't Forget To <a href='https://t.me/log_channel_a'>Join Here</a> For Updates!</b>",
         parse_mode=ParseMode.HTML,
@@ -169,16 +169,27 @@ async def quality_callback(client: Client, callback_query: CallbackQuery):
 # ---------------- Example: Using Selected Quality in Handlers ----------------
 # You need to modify each handler to use USER_QUALITY[chat_id]
 
-# Example for YouTube
 @app.on_message(filters.command("yt") & filters.private)
 async def download_youtube(client, message):
     chat_id = message.chat.id
-    url = message.text.split(" ", 1)[1]
+    try:
+        url = message.text.split(" ", 1)[1]
+    except IndexError:
+        await message.reply_text("❌ Please provide a YouTube URL.")
+        return
     quality = USER_QUALITY.get(chat_id, "720p")
     video_path = await youtube_download(url, quality)
     await client.send_video(chat_id, video_path)
 
-# Repeat the same in Instagram, TikTok, Facebook, Pinterest, Spotify handlers
+# Repeat for Instagram, TikTok, Facebook, Pinterest, Spotify using USER_QUALITY[chat_id]
 
-print("✅ Bot Successfully Started and Flask is running.")
-app.run()
+# ---------------- 24/7 Auto-Restart Loop ----------------
+import time
+
+while True:
+    try:
+        print("✅ Bot Successfully Started and Flask is running.")
+        app.run()
+    except Exception as e:
+        print(f"⚠️ Bot crashed: {e}\nRestarting in 5 seconds...")
+        time.sleep(5)
